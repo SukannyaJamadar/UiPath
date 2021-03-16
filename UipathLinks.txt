@@ -1,0 +1,17 @@
+Uipath Links
+Academy - https://www.uipath.com/rpa/academy
+Forum - https://forum.uipath.com/t/how-to-select-item-from-dropdown-inside-excel-file/54916
+Timezone - https://stackoverflow.com/questions/55901/web-service-current-time-zone-for-a-city
+Tech support - https://www.uipath.com/company/contact-us/contact-technical-support
+Uipath docs - https://docs.uipath.com/activities/docs/about-the-intelligent-ocr-activities-pack
+Uipath Go - https://marketplace.uipath.com/?sort=last_updated&page=1
+Regex - https://www.regular-expressions.info/modifiers.html
+Coursera - https://www.coursera.org/learn/machine-learning
+Machine learning - https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN
+DataCamp - https://www.datacamp.com/?variant=business
+Regex - https://users.cs.cf.ac.uk/Dave.Marshall/PERL/node79.html
+coding sites - https://www.freecodecamp.org/news/the-10-most-popular-coding-challenge-websites-of-2016-fb8a5672d22f/
+machine laerning - https://huyenchip.com/2019/08/05/free-online-machine-learning-curriculum.html
+EPF - https://unifiedportal-mem.epfindia.gov.in/memberinterface/
+Mempassbook - https://passbook.epfindia.gov.in/MemberPassBook/Login
+NPS- https://enps.nsdl.com/eNPS/NationalPensionSystem.html
