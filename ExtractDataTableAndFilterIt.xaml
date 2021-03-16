@@ -1,0 +1,130 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Extract_Airline_Details" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_AirlineDetails" Type="OutArgument(sd:DataRow)" />
+    <x:Property Name="in_Browser" Type="InArgument(ui:Browser)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>652.666666666667,806.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Extract_Airline_Details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Extract_Airline_Details" sap:VirtualizedContainerService.HintSize="476,742" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataRow[]" Name="dt_Result" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="ui:Browser" Name="browser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browser]" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe PHX'" sap:VirtualizedContainerService.HintSize="434,650" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="7b12a16afa181b52d6b0eb0de97d89ff" UiBrowser="[in_Browser]">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Double" Name="db_AverageAmount" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExtractData NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data " ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl class='flight-module segment offer-listing' tag='li' /&gt;&lt;webctrl class='grid-container standard-padding ' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt' tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column name='AirlineName' exact='1' attr='text'&gt;&lt;webctrl class='flight-module segment offer-listing' tag='li' /&gt;&lt;webctrl class='grid-container standard-padding ' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-col all-col-fill custom-short-r-margin' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt smalltablet-col-1-1 mobile-col-1-1' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-col all-col-fill' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-col tablet-col-1-3 desktop-col-1-3 custom-col-r-margin min-width-large-screens-only' tag='div' idx='1' /&gt;&lt;webctrl class='secondary-content overflow-ellipsis inline-children' tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column name='Price' exact='1' attr='text'&gt;&lt;webctrl class='flight-module segment offer-listing' tag='li' /&gt;&lt;webctrl class='grid-container standard-padding ' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-col all-col-shrink' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-grid all-grid-fallback-alt all-grid-align-end align-right smalltablet-col-1-1' tag='div' idx='1' /&gt;&lt;webctrl class='uitk-col price-details-container all-col-fill' tag='div' idx='1' /&gt;&lt;webctrl class='primary-content   custom-primary-padding' tag='div' idx='1' /&gt;&lt;webctrl class='full-bold no-wrap' tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="0">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="38b18db0-c588-48ca-b76c-a179219f066b" InformativeScreenshot="152b1b661ea3fbd6eb1d91a1e50bf11e" Selector="&lt;webctrl id='flightModuleList' tag='UL' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+            </ui:ExtractData>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataRow[]">[dt_Result]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataRow[]">[ExtractDataTable.Select("AirlineName = 'American Airlines'")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Double">[db_AverageAmount]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(ExtractDataTable.Compute("SUM(Price)", String.Empty)) / ExtractDataTable.Rows.Count]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataRow">[out_AirlineDetails]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataRow">[(From row As DataRow In ExtractDataTable.AsEnumerable Order By Math.Abs(Convert.ToDouble(row.Item(1)) - db_AverageAmount) Select row).FirstOrDefault]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>
